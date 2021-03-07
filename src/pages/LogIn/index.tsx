@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FiMail, FiLock } from 'react-icons/fi';
+import { FiMail, FiLock, FiAlertOctagon, FiAlertCircle } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
@@ -12,7 +12,13 @@ import Button from '../../components/Button';
 
 import { useAuth } from '../../hooks/auth';
 
-import { Container, Content, ForgotRemember, Background } from './styles';
+import {
+  Container,
+  Content,
+  ForgotRemember,
+  AccessAlertMessage,
+  Background,
+} from './styles';
 
 interface LogInFormData {
   email: string;
@@ -68,15 +74,20 @@ const LogIn: React.FC = () => {
 
           <ForgotRemember>
             <div>
-              <input id="remember" name="remember" type="checkbox" />
+              <input name="remember" type="checkbox" />
               <span>Lembre-me</span>
             </div>
 
             <Link to="/">Esqueci minha senha</Link>
           </ForgotRemember>
 
-          <Button type="submit">Acessar plataform</Button>
+          <Button type="submit">Acessar plataforma</Button>
         </Form>
+
+        <AccessAlertMessage>
+          <FiAlertCircle />
+          <p>Acesso restrito à sócios e moderadores</p>
+        </AccessAlertMessage>
       </Content>
     </Container>
   );

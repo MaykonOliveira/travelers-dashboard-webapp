@@ -87,6 +87,32 @@ export const ForgotRemember = styled.div`
   }
 `;
 
+export const AccessAlertMessage = styled.div`
+  width: 26rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  margin-top: 5rem;
+
+  svg {
+    width: 2.625rem;
+    height: 2.625rem;
+
+    color: #f25d27;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: #617480;
+
+    width: 8.75rem;
+    margin-left: 1.625rem;
+  }
+`;
+
 export const Background = styled.div`
   flex: 1;
   background: url(${backgroundImg}) no-repeat center;
