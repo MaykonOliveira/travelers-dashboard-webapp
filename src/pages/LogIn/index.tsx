@@ -45,7 +45,6 @@ const LogIn: React.FC = () => {
         if (error instanceof Yup.ValidationError) {
           const errors = getValidationErrors(error);
           formRef.current?.setErrors(errors);
-          return;
         }
       }
     },
@@ -66,7 +65,17 @@ const LogIn: React.FC = () => {
             type="password"
             placeholder="Senha"
           />
-          <Button type="submit">Entrar</Button>
+
+          <div>
+            <div>
+              <input id="remember" name="remember" type="checkbox" />
+              <span>Lembre-me</span>
+            </div>
+
+            <Link to="/">Esqueci minha senha</Link>
+          </div>
+
+          <Button type="submit">Acessar plataform</Button>
         </Form>
       </Content>
     </Container>

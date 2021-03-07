@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
-import backgroundImg from '../../assets/login.svg';
+import styled, { keyframes } from 'styled-components';
+import backgroundImg from '../../assets/login.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -25,51 +25,64 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 700px;
+  width: 45%;
 
   animation: ${animationAppearFromLeft} 1s;
 
-  img {
-    margin-bottom: 80px;
-  }
-
   form {
-    width: 340px;
-    margin: 80px 0;
-    text-align: center;
+    width: 26rem;
 
     h1 {
-      margin-bottom: 24px;
+      margin-bottom: 2.75rem;
     }
 
-    a {
-      display: block;
-      margin-top: 24px;
-      color: #f4ede8;
-      text-decoration: none;
-      transition: color 0.2s;
+    > div {
+      display: flex;
+      width: 100%;
+      margin: 2rem 0;
 
-      &:hover {
-        color: ${shade(0.2, '#f4ede8')};
+      color: #a0acb2;
+
+      align-items: center;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+          appearance: none;
+          width: 1.5rem;
+          height: 1.5rem;
+          border: 1px solid #dce2e6;
+          border-radius: 0.5rem;
+          text-align: center;
+          cursor: pointer;
+
+          &:checked {
+            background: #51b853;
+
+            &::after {
+              content: '✔';
+              color: white;
+            }
+          }
+        }
+
+        span {
+          margin-left: 1rem;
+        }
       }
-    }
-  }
 
-  > a {
-    display: flex;
-    align-items: center;
-    margin-top: 80px;
-    color: #ff9000;
-    text-decoration: none;
-    transition: color 0.2s;
+      a {
+        text-decoration: none;
+        color: #a0acb2;
 
-    &:hover {
-      color: ${shade(0.2, '#ff9000')};
-    }
-
-    svg {
-      margin-right: 18px;
+        &:hover {
+          color: ${shade(0.2, '#a0acb2')};
+        }
+      }
     }
   }
 `;
