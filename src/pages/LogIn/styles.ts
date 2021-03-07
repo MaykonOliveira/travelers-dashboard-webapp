@@ -35,54 +35,54 @@ export const Content = styled.div`
     h1 {
       margin-bottom: 2.75rem;
     }
+  }
+`;
 
-    > div {
-      display: flex;
-      width: 100%;
-      margin: 2rem 0;
+export const ForgotRemember = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 2rem 0;
 
-      color: #a0acb2;
+  color: #a0acb2;
 
-      align-items: center;
-      justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 
-      div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        input {
-          appearance: none;
-          width: 1.5rem;
-          height: 1.5rem;
-          border: 1px solid #dce2e6;
-          border-radius: 0.5rem;
-          text-align: center;
-          cursor: pointer;
+    input {
+      appearance: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 1px solid #dce2e6;
+      border-radius: 0.5rem;
+      text-align: center;
+      cursor: pointer;
 
-          &:checked {
-            background: #51b853;
+      &:checked {
+        background: #51b853;
 
-            &::after {
-              content: '✔';
-              color: white;
-            }
-          }
-        }
-
-        span {
-          margin-left: 1rem;
+        &::after {
+          content: '✔';
+          color: white;
         }
       }
+    }
 
-      a {
-        text-decoration: none;
-        color: #a0acb2;
+    span {
+      margin-left: 1rem;
+    }
+  }
 
-        &:hover {
-          color: ${shade(0.2, '#a0acb2')};
-        }
-      }
+  a {
+    text-decoration: none;
+    color: #a0acb2;
+
+    &:hover {
+      color: ${shade(0.2, '#a0acb2')};
     }
   }
 `;

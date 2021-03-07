@@ -3,21 +3,22 @@ import { shade } from 'polished';
 
 export const Container = styled.button`
   display: flex;
-  background: #ff9000;
-  height: 56px;
+  background: #f25d27;
+  height: 4.5rem;
   width: 100%;
   border-radius: 10px;
   border: 0;
-  padding: 0 16px;
-  color: #312e38;
+  padding: 0 1.5rem;
+  color: #fff;
   font-weight: 500;
-  margin-top: 24px;
+  font-size: 1.125rem;
+  margin-top: 2rem;
   transition: background-color 0.2s;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    background: ${shade(0.2, '#ff9000')};
+    background: ${shade(0.1, '#F25D27')};
   }
 `;
 

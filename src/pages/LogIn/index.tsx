@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
+import { FiMail, FiLock } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
@@ -12,7 +12,7 @@ import Button from '../../components/Button';
 
 import { useAuth } from '../../hooks/auth';
 
-import { Container, Content, Background } from './styles';
+import { Container, Content, ForgotRemember, Background } from './styles';
 
 interface LogInFormData {
   email: string;
@@ -66,14 +66,14 @@ const LogIn: React.FC = () => {
             placeholder="Senha"
           />
 
-          <div>
+          <ForgotRemember>
             <div>
               <input id="remember" name="remember" type="checkbox" />
               <span>Lembre-me</span>
             </div>
 
             <Link to="/">Esqueci minha senha</Link>
-          </div>
+          </ForgotRemember>
 
           <Button type="submit">Acessar plataform</Button>
         </Form>
