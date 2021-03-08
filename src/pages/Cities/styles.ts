@@ -20,6 +20,8 @@ export const Content = styled.div`
     height: 6rem;
     background: #fff;
 
+    border-bottom: 1px solid #dce2e6;
+
     h1 {
       font-size: 2.25rem;
       line-height: 2.875rem;
