@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FiMail, FiLock, FiAlertOctagon, FiAlertCircle } from 'react-icons/fi';
+import { FiMail, FiLock, FiAlertCircle } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
@@ -42,11 +42,11 @@ const LogIn: React.FC = () => {
         await schema.validate(data, {
           abortEarly: false,
         });
+        formRef.current?.setErrors({});
         await signIn({
           email: data.email,
           password: data.password,
         });
-        formRef.current?.setErrors({});
       } catch (error) {
         if (error instanceof Yup.ValidationError) {
           const errors = getValidationErrors(error);
