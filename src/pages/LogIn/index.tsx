@@ -1,4 +1,5 @@
 import React, { useCallback, useRef } from 'react';
+import Helmet from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FiMail, FiLock, FiAlertCircle } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
@@ -59,8 +60,10 @@ const LogIn: React.FC = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>Travelers | Login</title>
+      </Helmet>
       <Background />
-
       <Content>
         <Form ref={formRef} onSubmit={handleSubmit}>
           <h1>Fazer login</h1>

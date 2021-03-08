@@ -79,6 +79,7 @@ export const Cities = styled.div`
 `;
 
 export const City = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -90,19 +91,57 @@ export const City = styled.div`
   img {
     border-radius: 16px 16px 0 0;
   }
+`;
 
-  div {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
+export const CityDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
 
-    strong {
-      font-size: 1.25rem;
-      line-height: 1.875rem;
+  strong {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+
+  span {
+    line-height: 1.75rem;
+  }
+`;
+
+export const CityActions = styled.div`
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  margin: 1.25rem 1.25rem 0 0;
+
+  display: flex;
+
+  button {
+    border: none;
+    background: #fff;
+    color: #617480;
+    padding: 0.75rem;
+
+    transition: background 0.5s;
+
+    &:hover {
+      background: ${shade(0.1, '#fff')};
     }
 
-    span {
-      line-height: 1.75rem;
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &:first-child {
+      margin-right: 0.25rem;
+      border-radius: 0.625rem 0 0 0.625rem;
+    }
+
+    &:last-child {
+      border-radius: 0 0.625rem 0.625rem 0;
     }
   }
 `;
