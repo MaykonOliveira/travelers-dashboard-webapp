@@ -13,7 +13,7 @@ export const Container = styled.div`
   justify-content: space-between;
 
   height: 100vh;
-  max-width: 6rem;
+  width: 6rem;
 
   background: #f25d27;
   color: #fff;
