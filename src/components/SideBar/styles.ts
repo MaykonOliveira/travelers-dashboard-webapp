@@ -55,6 +55,9 @@ export const NavigationIcons = styled.div<SiderBarProps>`
         props.activePath !== '/cities' &&
         css`
           color: #ffa585;
+          &:hover {
+            color: ${shade(0.3, '#ffa585')};
+          }
         `}
     }
 
@@ -65,6 +68,9 @@ export const NavigationIcons = styled.div<SiderBarProps>`
         props.activePath !== '/categories' &&
         css`
           color: #ffa585;
+          &:hover {
+            color: ${shade(0.3, '#ffa585')};
+          }
         `}
     }
 
@@ -73,6 +79,9 @@ export const NavigationIcons = styled.div<SiderBarProps>`
         props.activePath !== '/messages' &&
         css`
           color: #ffa585;
+          &:hover {
+            color: ${shade(0.3, '#ffa585')};
+          }
         `}
     }
   }
