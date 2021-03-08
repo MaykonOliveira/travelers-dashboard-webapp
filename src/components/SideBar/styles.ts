@@ -1,5 +1,9 @@
 import { shade } from 'polished';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+interface SiderBarProps {
+  activePath?: string;
+}
 
 export const Container = styled.div`
   display: flex;
@@ -19,8 +23,15 @@ export const Container = styled.div`
 
     transition: color 0.5s;
 
+    width: 1.375rem;
+    height: 1.375rem;
+
     &:hover {
       color: ${shade(0.3, '#fff')};
+    }
+
+    &:last-child {
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -29,25 +40,40 @@ export const Container = styled.div`
     height: 3rem;
     margin-top: 1.5rem;
   }
+`;
 
-  div {
-    display: flex;
-    flex-direction: column;
+export const NavigationIcons = styled.div<SiderBarProps>`
+  display: flex;
+  flex-direction: column;
 
-    svg {
-      width: 1.375rem;
-      height: 1.375rem;
-
-      & + svg {
-        margin-top: 2.5rem;
-      }
-    }
-  }
-
-  svg:last-child {
+  svg {
     width: 1.375rem;
     height: 1.375rem;
 
-    margin-bottom: 1.5rem;
+    &:first-child {
+      ${props =>
+        props.activePath !== '/cities' &&
+        css`
+          color: #ffa585;
+        `}
+    }
+
+    & + svg {
+      margin-top: 2.5rem;
+
+      ${props =>
+        props.activePath !== '/categories' &&
+        css`
+          color: #ffa585;
+        `}
+    }
+
+    &:last-child {
+      ${props =>
+        props.activePath !== '/messages' &&
+        css`
+          color: #ffa585;
+        `}
+    }
   }
 `;
