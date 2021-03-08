@@ -7,6 +7,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
 
   header {
@@ -47,6 +48,47 @@ export const Content = styled.div`
       &:hover {
         background: ${shade(0.2, '#51b853')};
       }
+    }
+  }
+`;
+
+export const Cities = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 16.625rem);
+  grid-gap: 2rem;
+  padding: 3rem 0;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+`;
+
+export const City = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 16px;
+
+  background: #fff;
+  border: 1px solid #dce2e6;
+
+  img {
+    border-radius: 16px 16px 0 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+    strong {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+
+    span {
+      line-height: 1.75rem;
     }
   }
 `;
