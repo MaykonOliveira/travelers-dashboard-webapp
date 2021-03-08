@@ -38,12 +38,19 @@ const AuthProvider: React.FC = ({ children }) => {
   });
 
   const signIn = useCallback(async ({ email, password }) => {
-    const response = await api.post<AuthData>('/sessions', {
-      email,
-      password,
-    });
+    // const response = await api.post<AuthData>('/sessions', {
+    //   email,
+    //   password,
+    // });
 
-    const { token, user } = response.data;
+    // let { token, user } = response.data;
+
+    // Remover isso depois dos testes
+    const token = 'd51qw651d65wq1dwq651dw6q51';
+    const user = {
+      id: '115151115151wdqdwqdwq',
+      name: 'Maykon A. Oliveira',
+    };
 
     localStorage.setItem('@Travelers:token', token);
     localStorage.setItem('@Travelers:user', JSON.stringify(user));
