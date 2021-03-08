@@ -61,7 +61,21 @@ export const Cities = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 100%;
+  @media (max-width: 1550px) {
+    grid-template-columns: repeat(4, 16.625rem);
+  }
+
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(3, 16.625rem);
+  }
+
+  @media (max-width: 1100px) {
+    grid-template-columns: repeat(2, 16.625rem);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 16.625rem);
+  }
 `;
 
 export const City = styled.div`
