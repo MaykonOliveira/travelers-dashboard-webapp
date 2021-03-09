@@ -52,7 +52,7 @@ export const NavigationIcons = styled.div<SiderBarProps>`
 
     &:first-child {
       ${props =>
-        props.activePath !== '/cities' &&
+        props.activePath !== 'cities' &&
         css`
           color: #ffa585;
           &:hover {
@@ -65,7 +65,7 @@ export const NavigationIcons = styled.div<SiderBarProps>`
       margin-top: 2.5rem;
 
       ${props =>
-        props.activePath !== '/categories' &&
+        props.activePath !== 'categories' &&
         css`
           color: #ffa585;
           &:hover {
@@ -76,7 +76,7 @@ export const NavigationIcons = styled.div<SiderBarProps>`
 
     &:last-child {
       ${props =>
-        props.activePath !== '/messages' &&
+        props.activePath !== 'messages' &&
         css`
           color: #ffa585;
           &:hover {

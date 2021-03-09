@@ -52,7 +52,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Cities = styled.div`
+export const CitiesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 16.625rem);
   grid-gap: 2rem;

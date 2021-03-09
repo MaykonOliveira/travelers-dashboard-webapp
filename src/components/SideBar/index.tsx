@@ -16,7 +16,7 @@ const SideBar: React.FC = () => {
     <Container>
       <img src={logo} alt="Travelers" />
 
-      <NavigationIcons activePath={location.pathname}>
+      <NavigationIcons activePath={location.pathname.split('/')[1]}>
         <FiMapPin onClick={() => history.push('/cities')} />
         <FiGrid onClick={() => history.push('/categories')} />
         <FiMessageSquare />
