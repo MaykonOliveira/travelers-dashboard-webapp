@@ -9,7 +9,6 @@ import * as Yup from 'yup';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 import Input from '../../components/Input';
-import Button from '../../components/Button';
 
 import { useAuth } from '../../hooks/auth';
 
@@ -19,6 +18,7 @@ import {
   ForgotRemember,
   AccessAlertMessage,
   Background,
+  Button,
 } from './styles';
 
 interface LogInFormData {

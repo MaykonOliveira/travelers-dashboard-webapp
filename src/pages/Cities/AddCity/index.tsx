@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import { Container, Content } from './styles';
+import { Content, WizardHeader, Stepper } from './styles';
 
 interface AddCityProps {
   onAddCity(): void;
@@ -10,18 +10,24 @@ interface AddCityProps {
 
 const AddCity: React.FC<AddCityProps> = ({ onAddCity }) => {
   return (
-    <Container>
+    <>
       <Helmet>
         <title>Travelers | Adicionar Cidades</title>
       </Helmet>
-      <Content>
-        <header>
-          <button type="button" onClick={() => onAddCity()}>
-            <FiArrowLeft size={32} />
-          </button>
-        </header>
-      </Content>
-    </Container>
+      <WizardHeader>
+        <button type="button" onClick={() => onAddCity()}>
+          <FiArrowLeft />
+        </button>
+
+        <strong>Adicionar um perfil</strong>
+
+        <Stepper>
+          <span>01</span>
+          <span>02</span>
+        </Stepper>
+      </WizardHeader>
+      <Content>aqui</Content>
+    </>
   );
 };
 

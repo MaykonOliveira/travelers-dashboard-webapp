@@ -1,53 +1,59 @@
 import { shade } from 'polished';
 import styled from 'styled-components';
+import Header from '../../../components/Header';
 
-export const Container = styled.div`
-  display: flex;
-`;
+export const Content = styled.div``;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+export const WizardHeader = styled(Header)`
+  button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #dce2e6;
+    padding: 0;
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 7rem;
-
-    width: 100%;
-    height: 6rem;
     background: #fff;
+    color: #a0acb2;
 
-    border-bottom: 1px solid #dce2e6;
+    transition: background 0.5s;
 
-    h1 {
-      font-size: 2.25rem;
-      line-height: 2.875rem;
+    &:hover {
+      background: ${shade(0.1, '#fff')};
     }
 
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      border-radius: 10px;
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
 
-      padding: 0.6875rem 2rem;
+  strong {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.875rem;
+    color: #a0acb2;
+  }
+`;
 
-      background: #51b853;
-      color: #fff;
+export const Stepper = styled.div`
+  display: flex;
 
-      font-weight: 600;
-      line-height: 1.625rem;
+  span {
+    border-radius: 50%;
+    border: 1px solid #dce2e6;
+    color: #617480;
+    padding: 5px;
 
-      transition: background 0.5s;
+    align-items: center;
+    justify-content: center;
 
-      &:hover {
-        background: ${shade(0.2, '#51b853')};
-      }
+    &:first-child {
+      border: 3px solid #dce2e6;
+
+      font-weight: 700;
+    }
+
+    & + span {
+      margin-left: 10px;
     }
   }
 `;
