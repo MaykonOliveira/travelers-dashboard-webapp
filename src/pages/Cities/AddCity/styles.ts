@@ -170,7 +170,8 @@ export const FormInput = styled.input`
   color: #123952;
 `;
 
-export const FormInputImage = styled.input`
+export const FormInputImage = styled.label`
+  display: flex;
   height: 10rem;
   padding: 4.25rem 10rem;
 
@@ -181,7 +182,16 @@ export const FormInputImage = styled.input`
 
   line-height: 1.625rem;
 
-  color: #123952;
+  color: #f25d27;
+
+  cursor: pointer;
+
+  justify-content: center;
+  align-items: center;
+
+  input {
+    display: none;
+  }
 `;
 
 export const FormInputImagePreview = styled.div<FormInputImagePreviewProps>`

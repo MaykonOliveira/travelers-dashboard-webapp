@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { FiAlertCircle, FiArrowLeft } from 'react-icons/fi';
+import { FiAlertCircle, FiArrowLeft, FiPlus } from 'react-icons/fi';
 
 import {
   Content,
@@ -72,12 +73,16 @@ const AddCity: React.FC<AddCityProps> = ({ onAddCity }) => {
                 {cityImage ? (
                   <FormInputImagePreview src={cityImage} />
                 ) : (
-                  <FormInputImage
-                    type="file"
-                    name="img"
-                    accept="image/*"
-                    onChange={e => handleCityImageUpload(e)}
-                  />
+                  <FormInputImage>
+                    <input
+                      type="file"
+                      name="img"
+                      accept="image/*"
+                      onChange={e => handleCityImageUpload(e)}
+                    />
+                    <FiPlus />
+                    Adicionar uma foto
+                  </FormInputImage>
                 )}
               </StepFormSectionField>
 
